@@ -1,6 +1,17 @@
 
 
 class Joueur:
+
+
+    def __init__(self):
+        """ joueur """
+        self.nom = nom
+        self.elo
+
+
+
+    def __str__(self):
+        """ affichage"""
     """
         Cette classe permet de modéliser un joueur
     """
