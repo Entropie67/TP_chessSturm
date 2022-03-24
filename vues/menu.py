@@ -1,3 +1,5 @@
+from controleurs.tournois import GestionTournois
+
 class Menu:
 
     def __init__(self):
@@ -11,10 +13,11 @@ class Menu:
     def _accueil(self):
         print("\nFaites votre choix:")
         print("1. Créer un nouveau tournois")
-        choix = int(input("\n choix : __"))
+        self.choix = int(input("\n choix : __"))
 
     def _routage(self):
         if self.choix == 0:
             self._routage()
         else:
             print("... Process...")
+            start = GestionTournois()

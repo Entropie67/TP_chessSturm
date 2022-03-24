@@ -14,10 +14,10 @@ class Tournois:
         self.description = ""
 
     def __str__(self):
-        return f" \n#### Tournois {self.nom} ####\n" \
-               f"Lieu: {self.lieu} date : {self.date} Système: {self.temps}" \
+        return f" \n#### Tournois {self.name} ####\n" \
+               f"Lieu: {self.lieu} date : {self.date} \nSystème: {self.temps}" \
                f"Description :{self.description}" \
-               f"Joueurs : {[print(j) for j in self.joueurs]}"
+               f"\nJoueurs : {'---'.join([str(j) for j in self.joueurs])}"
 
     def add_player(self, player):
         self.joueurs.append(player)

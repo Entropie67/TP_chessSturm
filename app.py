@@ -1,6 +1,4 @@
 from modeles.joueur import Joueur
-from modeles.tournois import Tournois
-from controleurs.tournois import GestionTournois
 from vues.menu import Menu
 
 def main():
