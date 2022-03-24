@@ -12,7 +12,6 @@ class Joueur:
             self.date_naissance = date
             self.classement = elo
 
-
     def __str__(self):
         return f"\nNom: {self.name},\nAge: {self.age},\nSexe: {self.sexe}," \
                f"\nDate de naissance :{self.date_naissance},\nClassement: {self.classement}"
