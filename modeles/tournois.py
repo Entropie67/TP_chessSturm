@@ -15,14 +15,9 @@ class Tournois:
 
     def __str__(self):
         return f" \n#### Tournois {self.nom} ####\n" \
-               f"" \
-               f"" \
-               f"" \
-               f"" \
-               f"" \
-               f"" \
-               f"" \
-               f""
+               f"Lieu: {self.lieu} date : {self.date} Système: {self.temps}" \
+               f"Description :{self.description}" \
+               f"Joueurs : {[print(j) for j in self.joueurs]}"
 
     def add_player(self, player):
         self.joueurs.append(player)
