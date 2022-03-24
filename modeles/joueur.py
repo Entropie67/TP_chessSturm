@@ -2,7 +2,7 @@
 
 class Joueur:
     """
-        class joueur
+        Cette classe permet de modéliser un joueur
     """
 
     def __init__(self, name, age, sexe, date, elo):
