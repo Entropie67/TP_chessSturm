@@ -10,11 +10,8 @@ class GestionTournois:
         self.tournois = None
         self.data = None
 
-
     def creat(self, data):
-
         self.tournois = Tournois(*data)
-        print(self.tournois)
 
     def edit(self):
         pass
@@ -22,9 +19,10 @@ class GestionTournois:
     def save(self):
         pass
 
+    def display(self):
+        print(self.tournois)
 
     def add_players(self, joueur):
-
         self.tournois.add_player(joueur)
 
     

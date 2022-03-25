@@ -24,6 +24,6 @@ class Start:
                 print(f"\nAjout du joueur numéro {i+1} :\n")
                 self.start.add_players(Joueur(*self.menu.joueur()))
         elif self.choix == 3:
-            print(self.start)
+            self.start.display()
         else:
             print("Choix invalide")
