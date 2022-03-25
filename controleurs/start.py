@@ -1,14 +1,18 @@
 from vues.menu import Menu
 from controleurs.gestion_tournois import GestionTournois
+from modeles.joueur import Joueur
+
 
 class Start:
 
 
     def __init__(self):
         self.menu = Menu()
-        self.choix = self.menu.accueil()
         self.start = GestionTournois()
-        self._routage()
+        self.choix = -1
+        while self.choix != 0:
+            self.choix = self.menu.accueil()
+            self._routage()
 
 
     def _routage(self):
@@ -16,6 +20,10 @@ class Start:
             print("... Process...")
             self.start.creat(self.menu.tournois())
         elif self.choix == 2:
-            start
+            for i in range(8):
+                print(f"\nAjout du joueur numéro {i+1} :\n")
+                self.start.add_players(Joueur(*self.menu.joueur()))
+        elif self.choix == 3:
+            print(self.start)
         else:
             print("Choix invalide")

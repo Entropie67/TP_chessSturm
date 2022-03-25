@@ -9,9 +9,6 @@ class Menu:
         self.choix = 0
 
 
-    def joueur(self):
-        pass
-
     def tournois(self):
         nom = input("Quelle est le nom du tournois ?\t")
         lieu = input("Ou se déroule le tournois ?\t")
@@ -20,10 +17,19 @@ class Menu:
         description = input("Entrez une desciption du tournois ?\t")
         return nom, lieu, date, temps, description
 
+    def joueur(self):
+        nom = input("Quelle est le nom du joueur ?\t")
+        age = int(input("Age du joueur ?\t"))
+        sexe = input("Sexe ?\t")
+        date = input("Date de naissance ?\t")
+        classement = int(input("Classement du joueur ?\t"))
+        return nom, age, sexe, date, classement
+
     def accueil(self):
         print("\nFaites votre choix:")
         print("1. Créer un nouveau tournois")
         print("2. Ajouter des joueurs au tournois")
+        print("3. Afficher le tournois")
         self.choix = int(input("\n choix : "))
         return self.choix
 
