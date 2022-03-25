@@ -11,7 +11,7 @@ class Tournois:
         self.rondes = []
         self.joueurs = []
         t = ["blitz", "bullet", "Un coup rapide"]
-        self.temps = t[temps + 1]
+        self.temps = t[temps - 1]
         self.description = description
 
     def __str__(self):

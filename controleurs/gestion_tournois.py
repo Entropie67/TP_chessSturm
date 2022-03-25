@@ -6,23 +6,24 @@ class GestionTournois:
         Classe gérant le tournois
     """
 
-    def __init__(self, choix, state=None):
+    def __init__(self):
         self.tournois = None
-        self.data = state
-        if choix == 1:
-            self.creat()
-        else:
-            print("On fait autre chose avec un tournois")
+        self.data = None
 
-    def creat(self):
 
-        self.tournois = Tournois(*self.data)
+    def creat(self, data):
+
+        self.tournois = Tournois(*data)
         print(self.tournois)
 
     def edit(self):
         pass
 
     def save(self):
+        pass
+
+
+    def add_players(self):
         pass
 
     
