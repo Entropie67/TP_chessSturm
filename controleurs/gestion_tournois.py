@@ -25,4 +25,5 @@ class GestionTournois:
     def add_players(self, joueur):
         self.tournois.add_player(joueur)
 
-    
+    def start_play(self):
+        pass

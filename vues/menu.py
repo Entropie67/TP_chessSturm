@@ -30,6 +30,9 @@ class Menu:
         print("1. Créer un nouveau tournois")
         print("2. Ajouter des joueurs au tournois")
         print("3. Afficher le tournois")
+        print("4. Démarrer le tournois")
+        print("5. Sauvegarder le tournois")
+        print("6. Reprendre le tournois")
         self.choix = int(input("\n choix : "))
         return self.choix
 

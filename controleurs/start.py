@@ -26,5 +26,11 @@ class Start:
                 self.start.add_players(Joueur(*self.menu.joueur()))
         elif self.choix == 3:
             self.start.display()
+        elif self.choix == 4:
+            pass
+        elif self.choix == 5:
+            pass
+        elif self.choix == 6:
+            pass
         else:
-            print("Choix invalide")
+            print(" # Choix invalide # ")
