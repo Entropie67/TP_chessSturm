@@ -1,9 +1,9 @@
 from modeles.joueur import Joueur
-from vues.menu import Menu
+from controleurs.start import Start
 
 def main():
     # tournois = GestionTournois()
-    go = Menu()
+    Start()
     player1 = Joueur("Kasparov", "Gary", "M", "16/02/1975", 3000)
     print(player1)
 
