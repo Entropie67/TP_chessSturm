@@ -16,11 +16,12 @@ class Start:
 
 
     def _routage(self):
+        NB_JOUEURS = 2
         if self.choix == 1:
             print("... Process...")
             self.start.creat(self.menu.tournois())
         elif self.choix == 2:
-            for i in range(8):
+            for i in range(NB_JOUEURS):
                 print(f"\nAjout du joueur numéro {i+1} :\n")
                 self.start.add_players(Joueur(*self.menu.joueur()))
         elif self.choix == 3:
