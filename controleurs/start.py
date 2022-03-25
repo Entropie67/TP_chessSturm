@@ -10,12 +10,9 @@ class Start:
         self._routage()
 
 
-    def state(self):
-        return self.state
-
     def _routage(self):
-        if self.choix == 0:
-            self._routage()
-        else:
+        if self.choix == 1:
             print("... Process...")
-            start = GestionTournois(1)
+            start = GestionTournois(1, self.menu.tournois())
+        else:
+            print("Choix invalide")
