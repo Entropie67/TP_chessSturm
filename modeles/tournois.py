@@ -13,6 +13,8 @@ class Tournois:
         t = {1: "blitz", 2: "bullet", 3: "Un coup rapide"}
         self.temps = t[temps]
         self.description = description
+        self.etat_joueur =[]
+
 
     def __str__(self):
         return f" \n#### Tournois {self.name} ####\n" \

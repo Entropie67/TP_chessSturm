@@ -32,5 +32,7 @@ class Start:
             pass
         elif self.choix == 6:
             pass
+        elif self.choix == 7:
+            pass
         else:
             print(" # Choix invalide # ")

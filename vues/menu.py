@@ -33,6 +33,7 @@ class Menu:
         print("4. Démarrer le tournois")
         print("5. Sauvegarder le tournois")
         print("6. Reprendre le tournois")
+        print("7. Mode test avec joueurs et tournois automatiques")
         self.choix = int(input("\n choix : "))
         return self.choix
 
