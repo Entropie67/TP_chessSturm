@@ -8,8 +8,6 @@ class Joueur:
         self.nom = nom
         self.elo
 
-
-
     def __str__(self):
         """ affichage"""
     """

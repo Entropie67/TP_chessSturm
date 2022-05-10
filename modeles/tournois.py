@@ -10,8 +10,8 @@ class Tournois:
         self.nb_tour = nb_tour
         self.rondes = []
         self.joueurs = []
-        t = ["blitz", "bullet", "Un coup rapide"]
-        self.temps = t[temps - 1]
+        t = {1: "blitz", 2: "bullet", 3: "Un coup rapide"}
+        self.temps = t[temps]
         self.description = description
 
     def __str__(self):

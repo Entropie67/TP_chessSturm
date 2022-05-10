@@ -27,7 +27,7 @@ class Start:
         elif self.choix == 3:
             self.start.display()
         elif self.choix == 4:
-            pass
+            self.start.start_play()
         elif self.choix == 5:
             pass
         elif self.choix == 6:

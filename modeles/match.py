@@ -1,4 +1,6 @@
 from random import randint
+
+
 class Match:
     """
         Classe qui modélise un match
