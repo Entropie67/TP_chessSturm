@@ -24,3 +24,9 @@ class Tournois:
 
     def add_player(self, player):
         self.joueurs.append(player)
+
+    def get_players(self):
+        pass
+
+    def add_rond(self):
+        pass
