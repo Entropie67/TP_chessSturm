@@ -33,6 +33,10 @@ class Start:
         elif self.choix == 6:
             pass
         elif self.choix == 7:
-            pass
+            print("... Process...")
+            self.start.creat(self.menu.tournois(True))
+            for i in range(NB_JOUEURS):
+                print(f"\nAjout du joueur numéro {i+1} :\n")
+                self.start.add_players(Joueur(*self.menu.joueur(True)))
         else:
             print(" # Choix invalide # ")

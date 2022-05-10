@@ -9,20 +9,34 @@ class Menu:
         self.choix = 0
 
 
-    def tournois(self):
-        nom = input("Quelle est le nom du tournois ?\t")
-        lieu = input("Ou se déroule le tournois ?\t")
-        date = input("Quand se déroule le tournois ?\t")
-        temps = int(input("1. Blitz 2. Bulet 3. Un coup rapide ?\t"))
-        description = input("Entrez une desciption du tournois ?\t")
+    def tournois(self, test=False):
+        if test:
+            nom = "Tournois de Strasbourg"
+            lieu = "Strasbourg"
+            date = "02/02/2023"
+            temps = 1
+            description = "Ceci est le tournois de test, généré automatiquement."
+        else:
+            nom = input("Quelle est le nom du tournois ?\t")
+            lieu = input("Ou se déroule le tournois ?\t")
+            date = input("Quand se déroule le tournois ?\t")
+            temps = int(input("1. Blitz 2. Bulet 3. Un coup rapide ?\t"))
+            description = input("Entrez une desciption du tournois ?\t")
         return nom, lieu, date, temps, description
 
-    def joueur(self):
-        nom = input("Quelle est le nom du joueur ?\t")
-        age = int(input("Age du joueur ?\t"))
-        sexe = input("Sexe ?\t")
-        date = input("Date de naissance ?\t")
-        classement = int(input("Classement du joueur ?\t"))
+    def joueur(self, test=False):
+        if test: # Achanger pour un ajout automatique des joueurs
+            nom = input("Quelle est le nom du joueur ?\t")
+            age = int(input("Age du joueur ?\t"))
+            sexe = input("Sexe ?\t")
+            date = input("Date de naissance ?\t")
+            classement = int(input("Classement du joueur ?\t"))
+        else:
+            nom = input("Quelle est le nom du joueur ?\t")
+            age = int(input("Age du joueur ?\t"))
+            sexe = input("Sexe ?\t")
+            date = input("Date de naissance ?\t")
+            classement = int(input("Classement du joueur ?\t"))
         return nom, age, sexe, date, classement
 
     def accueil(self):
