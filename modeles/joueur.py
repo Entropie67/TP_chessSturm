@@ -2,14 +2,6 @@
 
 class Joueur:
 
-
-    def __init__(self):
-        """ joueur """
-        self.nom = nom
-        self.elo
-
-    def __str__(self):
-        """ affichage"""
     """
         Cette classe permet de modéliser un joueur
     """
@@ -23,7 +15,7 @@ class Joueur:
 
     def __str__(self):
         return f"\nNom: {self.name},\nAge: {self.age},\nSexe: {self.sexe}," \
-               f"\nDate de naissance :{self.date_naissance},\nClassement: {self.elo}"
+               f"\nDate de naissance :{self.date_naissance},\nClassement: {self.elo}\n"
 
     @property
     def classement(self):
