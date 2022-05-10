@@ -26,11 +26,15 @@ class Menu:
 
     def joueur(self, test=False):
         if test: # Achanger pour un ajout automatique des joueurs
-            nom = input("Quelle est le nom du joueur ?\t")
-            age = int(input("Age du joueur ?\t"))
-            sexe = input("Sexe ?\t")
-            date = input("Date de naissance ?\t")
-            classement = int(input("Classement du joueur ?\t"))
+            import random
+            from faker import Factory
+            fake = Factory.create('fr_FR')
+            s = ["F", "M"]
+            nom = fake.name()
+            age = random.randint(11, 93)
+            sexe = s[random.randint(0, 1)]
+            date = "21/09/2005"
+            classement = random.randint(1000, 3000)
         else:
             nom = input("Quelle est le nom du joueur ?\t")
             age = int(input("Age du joueur ?\t"))

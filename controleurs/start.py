@@ -16,7 +16,7 @@ class Start:
 
 
     def _routage(self):
-        NB_JOUEURS = 2
+        NB_JOUEURS = 8
         if self.choix == 1:
             print("... Process...")
             self.start.creat(self.menu.tournois())
