@@ -24,3 +24,22 @@ class Joueur:
     @classement.setter
     def classement(self, val):
         self.elo = val
+
+    def __eq__(self, other):
+        if self.elo == other.elo:
+            return True
+        else:
+            return False
+
+    def __lt__(self, other):
+        if self.elo < other.elo:
+            return True
+        else:
+            return False
+
+    def __gt__(self, other):
+        if self.elo > other.elo:
+            return True
+        else:
+            return False
+

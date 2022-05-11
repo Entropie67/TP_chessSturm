@@ -20,10 +20,10 @@ class Tournois:
         return f" \n#### Tournois {self.name} ####\n" \
                f"Lieu: {self.lieu} date : {self.date} \nSystème: {self.temps}" \
                f"Description :{self.description}" \
-               f"\nJoueurs : {'---'.join([str(j) for j in self.joueurs])}"
+               f"\nJoueurs : {'---'.join([str(j['joueur']) for j in self.joueurs])}"
 
     def add_player(self, player):
-        self.joueurs.append(player)
+        self.joueurs.append({"joueur": player, "score": 0, "adversaires": []})
 
     def get_players(self):
         pass

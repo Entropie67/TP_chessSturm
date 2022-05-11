@@ -1,5 +1,5 @@
 from modeles.tournois import Tournois
-
+from modeles.ronde import Ronde
 
 class GestionTournois:
     """
@@ -28,3 +28,8 @@ class GestionTournois:
     def start_play(self):
         pass
 
+    def make_match(self):
+        listes_joueurs = self.tournois.get_players()
+
+    def _trier_joueur(self):
+        pass
