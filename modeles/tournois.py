@@ -25,8 +25,13 @@ class Tournois:
     def add_player(self, player):
         self.joueurs.append({"joueur": player, "score": 0, "adversaires": []})
 
-    def get_players(self):
-        pass
+    @property
+    def players(self):
+        return self.joueurs
 
     def add_rond(self):
         pass
+
+    def get_num_ronde(self):
+        return len(self.rondes)
+

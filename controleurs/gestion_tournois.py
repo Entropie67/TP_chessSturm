@@ -1,5 +1,7 @@
 from modeles.tournois import Tournois
 from modeles.ronde import Ronde
+from modeles.match import Match
+
 
 class GestionTournois:
     """
@@ -26,10 +28,26 @@ class GestionTournois:
         self.tournois.add_player(joueur)
 
     def start_play(self):
-        pass
+
+        # pour tester
+        l = self.make_match()
+        for i in l:
+            print(i)
 
     def make_match(self):
-        listes_joueurs = self.tournois.get_players()
+        liste_matchs = []
+        listes_joueurs = self.tournois.players
+        if self.tournois.get_num_ronde() == 0:
+            print("lancement du tris")
+            # On tris les joueurs en fonction de leurs classement (elo)
+            listes_joueurs = sorted(listes_joueurs, key=lambda x: x['joueur'].classement, reverse=True)
+            liste_matchs = [Match(listes_joueurs[i], listes_joueurs[i + 4]) for i in range(4)]
+            # set une ronde 1 ici + mettre à jour les infors joueurs
+        else:
+            pass
 
-    def _trier_joueur(self):
-        pass
+        return liste_matchs
+
+    def _trier_joueur(self, liste):
+
+        return liste

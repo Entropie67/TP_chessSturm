@@ -12,7 +12,7 @@ class Match:
         self._resultat = self._deroulement()
 
     def __str__(self):
-        return f" \n {self.player_blanc} avec les blanc vs. {self.player_noir} avec les noirs" \
+        return f" \n {self.player_blanc['joueur'].name} avec les blanc vs. {self.player_noir['joueur'].name} avec les noirs" \
                f" => Résultat: {self.resultat}"
 
     def _deroulement(self):
