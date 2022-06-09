@@ -29,8 +29,8 @@ class Tournois:
     def players(self):
         return self.joueurs
 
-    def add_rond(self):
-        pass
+    def add_rond(self, liste):
+        self.rondes.append(liste)
 
     def get_num_ronde(self):
         return len(self.rondes)

@@ -25,7 +25,7 @@ class Menu:
         return nom, lieu, date, temps, description
 
     def joueur(self, test=False):
-        if test: # Achanger pour un ajout automatique des joueurs
+        if test: # A changer pour un ajout automatique des joueurs
             import random
             from faker import Factory
             fake = Factory.create('fr_FR')

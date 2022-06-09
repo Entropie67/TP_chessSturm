@@ -1,6 +1,3 @@
-from typing import any
-
-
 
 class Joueur:
 
@@ -9,15 +6,29 @@ class Joueur:
     """
 
     def __init__(self, name: str, age: int, sexe: str, date: str, elo: int) -> None:
-            self.name = name
-            self.age = age
-            self.sexe = sexe
-            self.date_naissance = date
-            self.elo = elo
+        """
+        Constructeur de la classe Joueur
+        :param name:
+        :param age:
+        :param sexe:
+        :param date:
+        :param elo:
+        """
+        print(name, age, sexe, date, elo)
+
+        self.age = age
+        self.sexe = sexe
+        self.date_naissance = date
+        self.elo = elo
+        self._name = name
 
     def __str__(self) -> str:
         return f"\nNom: {self.name},\nAge: {self.age},\nSexe: {self.sexe}," \
                f"\nDate de naissance :{self.date_naissance},\nClassement: {self.elo}\n"
+
+    @property
+    def name(self) -> str:
+        return self._name
 
     @property
     def classement(self) -> int:
@@ -45,4 +56,3 @@ class Joueur:
             return True
         else:
             return False
-

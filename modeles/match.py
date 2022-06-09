@@ -21,7 +21,14 @@ class Match:
             0 pour un match nul, 1 pour une victoire des blancs et 2 pour une victoire des noirs
         """
         # Pondération à ajouter
-        return randint(0, 2)
+        # resul = int(input("Entrez le résultat du match : "))
+        resul = randint(0, 2)
+        if resul == 0 :
+            self.player_blanc["score"] += 0.5
+            self.player_noir["score"] += 0.5
+            self.player_blanc["adversaires"].append(self.player_noir['joueur'])
+            self.player_noir["adversaires"].append(self.player_blanc['joueur'])
+        return resul
 
     @property
     def resultat(self):

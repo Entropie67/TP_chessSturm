@@ -42,7 +42,8 @@ class GestionTournois:
             # On tris les joueurs en fonction de leurs classement (elo)
             listes_joueurs = sorted(listes_joueurs, key=lambda x: x['joueur'].classement, reverse=True)
             liste_matchs = [Match(listes_joueurs[i], listes_joueurs[i + 4]) for i in range(4)]
-            # set une ronde 1 ici + mettre à jour les infors joueurs
+            self.tournois.add_rond(liste_matchs)
+            self.maj(liste_matchs)
         else:
             pass
 
@@ -51,3 +52,7 @@ class GestionTournois:
     def _trier_joueur(self, liste):
 
         return liste
+
+    def maj(self, liste_matchs):
+        for i in liste_matchs:
+            print(i.resultat)
